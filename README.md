@@ -7,6 +7,28 @@ Example in code: // Issue 1
 
 Example in readme: Issue 1: method pay was missing, added it because the application won't calculate sums without it.
 
+Issue 1: Many typos and height -> wrap_content
+Issue 2: Getters created
+Issue 3: MainActivity missing
+Issue 4: setTextTo -> setText
+Issue 5: Setters created
+Issue 6: string -> int
+Issue 7: makeText was missing
+Issue 8: rateyear -> year
+Issue 9: ++m -> n++
+Issue 10: show -> setAdapter
+Issue 11: LinearLayout in wrong place
+Issue 12: id -> string
+Issue 13: Terms should be between 1 and 12
+Issue 14: Year should be between 1 and 60
+Issue 15: Interest rate must be positive and less than 50
+Issue 16: private -> public
+Issue 18: Disable method created and called out in onClear 
+Issue 19: Activity added
+Issue 20: Adapter added
+Issue 21: 44 -> 4
+Issue 22: Back button functionality 
+
 # Application description:
 This application lets user calculate the payment on a loan. Every time the loan is an annuity loan.
 In the top two fields one must be able to enter the borrowing costs and the loan principal respectively, while in the next two fields able to enter the number of years for the repayment of the loan and the number of terms per year.
