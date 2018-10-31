@@ -2,6 +2,7 @@ package com.nagel.loanapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
 
@@ -10,9 +11,8 @@ import java.util.List;
 
 public class PlanActivity extends AppCompatActivity {
 
-    //Issue 17
-    public List<String> items = new ArrayList();
-    public ArrayAdapter adapter;
+    private List<String> items = new ArrayList();
+    private ArrayAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,11 +33,27 @@ public class PlanActivity extends AppCompatActivity {
         }
         GridView grid = findViewById(R.id.grid);
         //Issue 20
-        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1);
+        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1, items);
+
+
         //Issue 10
         grid.setAdapter(adapter);
 
+        adapter.notifyDataSetChanged();
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+    }
+
+    //Issue 22
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

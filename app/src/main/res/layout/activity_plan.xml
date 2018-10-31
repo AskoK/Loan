@@ -9,11 +9,13 @@
 
 
 <!-- Issue 11 -->
+    <!-- Issue 21 -->
+
     <GridView
         android:id="@+id/grid"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:stretchMode="columnWidth"
-        android:numColumns="44"/>
+        android:numColumns="4"/>
 
 </LinearLayout>
